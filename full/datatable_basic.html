@@ -973,12 +973,12 @@
 						<!-- /extensions -->
 
 						<!-- Tables -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Enlistar</div> <i class="icon-menu" title="Tables"></i></li>
-					<!--
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Tablas</div> <i class="icon-menu" title="Tables"></i></li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-table2"></i> <span>Basic tables</span></a>
+							<a href="#" class="nav-link"><i class="icon-table2"></i> <span>Departamentos</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Basic tables">
-								<li class="nav-item"><a href="table_basic.html" class="nav-link">Basic examples</a></li>
+								<li class="nav-item"><a href="table_basic.html" class="nav-link">Lista</a></li>
+								<!--
 								<li class="nav-item"><a href="table_sizing.html" class="nav-link">Table sizing</a></li>
 								<li class="nav-item"><a href="table_borders.html" class="nav-link">Table borders</a></li>
 								<li class="nav-item"><a href="table_styling.html" class="nav-link">Table styling</a></li>
@@ -1301,6 +1301,12 @@
 						The <code>DataTables</code> is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table. DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function. Searching, ordering, paging etc goodness will be immediately added to the table, as shown in this example. <strong>Datatables support all available table styling.</strong>
 					</div>
 
+<div class="card-body">
+						<div class="form-group">
+							<button type="button" id="edit" class="btn btn-primary"><i class="icon-pencil3 mr-2"></i> Edit</button>
+							<button type="button" id="save" class="btn btn-success"><i class="icon-checkmark3 mr-2"></i> Save</button>
+						</div>
+
 					<table class="table datatable-basic">
 						<thead>
 							<tr>
@@ -1316,6 +1322,7 @@
 							</tr>
 						</thead>
 						<tbody>
+
 							<tr>
 								<td>Eduardo</td>
 								<td>Castro</td>
