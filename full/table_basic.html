@@ -482,13 +482,13 @@
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Empleados</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Form components">
-								<li class="nav-item"><a href="form_inputs.html" class="nav-link">Agregar</a></li>
+								<li class="nav-item"><a href="form_inputs.html" class="nav-link">Enlistar</a></li>
 								<!--
 								<li class="nav-item"><a href="form_checkboxes_radios.html" class="nav-link">Checkboxes &amp; radios</a></li>
 								<li class="nav-item"><a href="form_select2.html" class="nav-link">Select2 selects</a></li>
 								<li class="nav-item"><a href="form_multiselect.html" class="nav-link">Bootstrap multiselect</a></li>
 							-->
-								<li class="nav-item"><a href="form_input_groups.html" class="nav-link">Editar</a></li>
+								<li class="nav-item"><a href="form_input_groups.html" class="nav-link">Registrar</a></li>
 								<!--
 								<li class="nav-item"><a href="form_controls_extended.html" class="nav-link">Extended controls</a></li>
 								<li class="nav-item"><a href="form_floating_labels.html" class="nav-link">Floating labels</a></li>
@@ -983,9 +983,9 @@
 						</li>
 					-->
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-grid7"></i> <span>Tabla de lista de empleados</span></a>
+							<a href="#" class="nav-link"><i class="icon-grid7"></i> <span>Tabla de lista a Editar</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Data tables">
-								<li class="nav-item"><a href="datatable_basic.html" class="nav-link">Lista de empleados</a></li>
+								<li class="nav-item"><a href="datatable_basic.html" class="nav-link">Editar</a></li>
 							<!--
 								<li class="nav-item"><a href="datatable_styling.html" class="nav-link">Basic styling</a></li>
 								<li class="nav-item"><a href="datatable_advanced.html" class="nav-link">Advanced examples</a></li>
@@ -994,10 +994,12 @@
 								<li class="nav-item"><a href="datatable_data_sources.html" class="nav-link">Data sources</a></li>
 							</ul>
 						</li>
-						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-alignment-unalign"></i> <span>Data tables extensions</span></a>
+						-->
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+							<a href="#" class="nav-link"><i class="icon-alignment-unalign"></i> <span>Empresas</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Data tables extensions">
-								<li class="nav-item"><a href="datatable_extension_reorder.html" class="nav-link">Columns reorder</a></li>
+								<li class="nav-item"><a href="datatable_extension_reorder.html" class="nav-link active">Agregar</a></li>
+								<!--
 								<li class="nav-item"><a href="datatable_extension_row_reorder.html" class="nav-link">Row reorder</a></li>
 								<li class="nav-item"><a href="datatable_extension_fixed_columns.html" class="nav-link">Fixed columns</a></li>
 								<li class="nav-item"><a href="datatable_extension_fixed_header.html" class="nav-link">Fixed header</a></li>
@@ -1017,10 +1019,12 @@
 								<li class="nav-item"><a href="datatable_extension_colvis.html" class="nav-link">Columns visibility</a></li>
 							</ul>
 						</li>
+						-->
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-file-spreadsheet"></i> <span>Handsontable</span></a>
+							<a href="#" class="nav-link"><i class="icon-file-spreadsheet"></i> <span>Vacaciones</span></a>
 							<ul class="nav nav-group-sub" data-submenu-title="Handsontable">
-								<li class="nav-item"><a href="handsontable_basic.html" class="nav-link">Basic configuration</a></li>
+								<li class="nav-item"><a href="handsontable_basic.html" class="nav-link">Registro de Vacaciones</a></li>
+								<!--
 								<li class="nav-item"><a href="handsontable_advanced.html" class="nav-link">Advanced setup</a></li>
 								<li class="nav-item"><a href="handsontable_cols.html" class="nav-link">Column features</a></li>
 								<li class="nav-item"><a href="handsontable_cells.html" class="nav-link">Cell features</a></li>
@@ -1306,7 +1310,202 @@
 					<div class="card-body">
 						Example of a <code>basic</code> table. For basic styling (light padding and only horizontal dividers) add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted to isolate our custom table styles.
 					</div>
+                   <div class="datatable-header">
+								<div id="DataTables_Table_0_filter" class="dataTables_filter"><label>
+									<span>Buscador:</span> 
+									<input type="search" class="" placeholder="Editar"aria-controls="DataTables_Table_0">
+								</label>
+							</div>
+							
+							<td>
+										<div class="list-icons">
+					                		<a href="#" class="list-icons-item" data-toggle="modal" data-target="#edit_modal">
+					                			<i class="icon-pencil7"></i>
+				                			</a>
+					                		<a href="#" class="list-icons-item" data-toggle="modal" data-target="#remove_modal">
+					                			<i class="icon-trash"></i>
+				                			</a>
+					                		<a href="#" class="list-icons-item" data-toggle="modal" data-target="#options_modal">
+					                			<i class="icon-cog6"></i>
+				                			</a>
+					                	</div>
+									</td>
+									<div id="edit_modal" class="modal fade" role="dialog" style="display: none;" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header bg-transparent">
+								<h5 class="modal-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar tabla</font></font></h5>
+								<button type="button" class="close" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></button>
+							</div>
 
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Primer nombre</font></font></th>
+											<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apellido</font></font></th>
+											<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nombre de usuario</font></font></th>
+											<th class="col-xs-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Acción</font></font></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input type="text" class="form-control" value="Eduardo"></td>
+											<td><input type="text" class="form-control" value="Rocio"></td>
+											<td><input type="text" class="form-control" value="Jesus"></td>
+											<td class="text-center">
+												<div class="list-icons">
+							                		<a href="#" class="list-icons-item"><i class="icon-plus3 font-size-base"></i></a>
+							                		<a href="#" class="list-icons-item"><i class="icon-cross2 font-size-base"></i></a>
+							                	</div>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="text" class="form-control" value="Castro"></td>
+											<td><input type="text" class="form-control" value="Guerrero"></td>
+											<td><input type="text" class="form-control" value="Uriegas"></td>
+											<td class="text-center">
+												<div class="list-icons">
+							                		<a href="#" class="list-icons-item"><i class="icon-plus3 font-size-base"></i></a>
+							                		<a href="#" class="list-icons-item"><i class="icon-cross2 font-size-base"></i></a>
+							                	</div>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="text" class="form-control" value="Castro"></td>
+											<td><input type="text" class="form-control" value="Guerrero"></td>
+											<td><input type="text" class="form-control" value="Uriegas"></td>
+											<td class="text-center">
+												<div class="list-icons">
+							                		<a href="#" class="list-icons-item"><i class="icon-plus3 font-size-base"></i></a>
+							                		<a href="#" class="list-icons-item"><i class="icon-cross2 font-size-base"></i></a>
+							                	</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="modal-footer bg-transparent">
+								<button type="button" class="btn btn-link" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cerrar</font></font></button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Guardar cambios</font></font></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="remove_modal" class="modal fade" role="dialog" style="display: none;" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Confirmar acción</font></font></h5>
+								<button type="button" class="close" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></button>
+							</div>
+
+							<div class="modal-body"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+								Estás a punto de eliminar esta fila. </font><font style="vertical-align: inherit;">¿Estás seguro?
+							</font></font></div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sí, eliminar</font></font></button>
+								<button type="button" class="btn btn-light" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No, gracias</font></font></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="options_modal" class="modal fade" role="dialog" style="display: none;" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Opciones de fila</font></font></h5>
+								<button type="button" class="close" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></button>
+							</div>
+
+							<div class="modal-body">
+								<form action="">
+									<div class="form-group row">
+										<label class="font-weight-semibold col-form-label col-sm-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Permitir seleccionar:</font></font></label>
+										<div class="col-sm-9">
+											<select class="form-control form-control-select2 select2-hidden-accessible" data-fouc="" tabindex="-1" aria-hidden="true">
+												<option value="single" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soltero</font></font></option>
+												<option value="multiple"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Múltiple</font></font></option>
+												<option value="disabled"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Discapacitado</font></font></option>
+											</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-wj1e-container"><span class="select2-selection__rendered" id="select2-wj1e-container" title="Soltero"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soltero</font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="font-weight-semibold col-form-label col-sm-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Permitir edición:</font></font></label>
+										<div class="col-sm-9">
+											<select class="form-control form-control-select2 select2-hidden-accessible" data-fouc="" tabindex="-1" aria-hidden="true">
+												<option value="inline"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar en línea</font></font></option>
+												<option value="modal" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar en modal</font></font></option>
+												<option value="popover"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar en popover</font></font></option>
+												<option value="disabled"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Discapacitado</font></font></option>
+											</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-qbez-container"><span class="select2-selection__rendered" id="select2-qbez-container" title="Editar en modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar en modal</font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="font-weight-semibold col-form-label col-sm-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Añadir estado:</font></font></label>
+										<div class="col-sm-9">
+											<select class="form-control form-control-select2 select2-hidden-accessible" data-fouc="" tabindex="-1" aria-hidden="true">
+												<option value="completed" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Terminado</font></font></option>
+												<option value="progress"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En progreso</font></font></option>
+												<option value="assigned"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Asignado</font></font></option>
+												<option value="created"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Creado</font></font></option>
+											</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-4kl9-container"><span class="select2-selection__rendered" id="select2-4kl9-container" title="Terminado"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Terminado</font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="font-weight-semibold col-form-label col-sm-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fijar prioridad:</font></font></label>
+										<div class="col-sm-9">
+											<select class="form-control form-control-select2-actions select2-hidden-accessible" data-fouc="" tabindex="-1" aria-hidden="true">
+												<option value="urgent" data-icon="radio-checked text-danger" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></option>
+												<option value="high" data-icon="radio-checked text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alto</font></font></option>
+												<option value="normal" data-icon="radio-checked text-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Normal</font></font></option>
+												<option value="low" data-icon="radio-checked text-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bajo</font></font></option>
+											</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-wynh-container"><span class="select2-selection__rendered" id="select2-wynh-container" title="Urgente"><i class="icon-radio-checked text-danger"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Urgente</font></font></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="font-weight-semibold col-form-label col-sm-3" for="enable-controls"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Habilitar controles:</font></font></label>
+										<div class="col-sm-9">
+											<div class="form-check form-check-switchery">
+												<input type="checkbox" class="form-input-switchery-controls" id="enable_controls" checked="" data-fouc="" data-switchery="true" style="display: none;"><span class="switchery switchery-default" style="background-color: rgb(100, 189, 99); border-color: rgb(100, 189, 99); box-shadow: rgb(100, 189, 99) 0px 0px 0px 0px inset; transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s, background-color 1.2s ease 0s;"><small style="left: 18px; background-color: rgb(255, 255, 255); transition: background-color 0.4s ease 0s, left 0.2s ease 0s;"></small></span>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="font-weight-semibold col-form-label col-sm-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Controles:</font></font></label>
+										<div class="col-sm-9">
+											<select class="form-control form-control-select2-actions select2-hidden-accessible" id="available_controls" multiple="" tabindex="-1" aria-hidden="true">
+												<option value="edit" data-icon="pencil7" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar</font></font></option>
+												<option value="remove" data-icon="trash" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eliminar</font></font></option>
+												<option value="options" data-icon="cog4" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Opciones</font></font></option>
+												<option value="add" data-icon="plus22"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Añadir</font></font></option>
+												<option value="add" data-icon="versions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copiar</font></font></option>
+												<option value="select" data-icon="check"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Seleccionar</font></font></option>
+												<option value="mark" data-icon="file-download"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exportar</font></font></option>
+												<option value="mark" data-icon="file-upload"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Importar</font></font></option>
+												<option value="mark" data-icon="printer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Impresión</font></font></option>
+											</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-selection__choice" title="Editar"><span class="select2-selection__choice__remove" role="presentation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></span><i class="icon-pencil7"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar</font></font></li><li class="select2-selection__choice" title="Eliminar"><span class="select2-selection__choice__remove" role="presentation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></span><i class="icon-trash"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eliminar</font></font></li><li class="select2-selection__choice" title="Opciones"><span class="select2-selection__choice__remove" role="presentation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></span><i class="icon-cog4"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Opciones</font></font></li><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-link" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cancelar</font></font></button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Guardar ajustes</font></font></button>
+							</div>
+						</div>
+					</div>
+				</div>
 					<div class="table-responsive">
 						<table class="table">
 							<thead>
